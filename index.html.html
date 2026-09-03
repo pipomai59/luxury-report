@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>รายงานการจับกุม Luxury Packaging Exchange</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Sarabun:wght@400;500;600&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --plane:#f4f4f2;
+  --surface:#ffffff;
+  --surface-2:#fbfbf9;
+  --ink:#14161c;
+  --ink-2:#54565f;
+  --ink-3:#8a8c95;
+  --rule:#e3e3dd;
+  --hair:rgba(20,22,28,.10);
+  --navy:#1f3a63;
+  --navy-ink:#ffffff;
+  --accent:#2a78d6;
+  --st-arrest:#0ca30c;
+  --st-custody:#2a78d6;
+  --st-dead:#6b6d76;
+  --st-pending:#fab219;
+  --st-pending-ink:#8a5a00;
+  --st-arrest-ink:#006300;
+  --shadow:0 1px 2px rgba(20,22,28,.05), 0 6px 18px rgba(20,22,28,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --plane:#0e0f12;
+    --surface:#191b20;
+    --surface-2:#15171b;
+    --ink:#f4f4f2;
+    --ink-2:#b9bac1;
+    --ink-3:#8a8c95;
+    --rule:#2b2d34;
+    --hair:rgba(255,255,255,.10);
+    --navy:#16273f;
+    --navy-ink:#e9eef6;
+    --accent:#3987e5;
+    --st-arrest:#0ca30c;
+    --st-custody:#3987e5;
+    --st-dead:#8a8c95;
+    --st-pending:#fab219;
+    --st-pending-ink:#fab219;
+    --st-arrest-ink:#0ca30c;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --plane:#0e0f12;
+  --surface:#191b20;
+  --surface-2:#15171b;
+  --ink:#f4f4f2;
+  --ink-2:#b9bac1;
+  --ink-3:#8a8c95;
+  --rule:#2b2d34;
+  --hair:rgba(255,255,255,.10);
+  --navy:#16273f;
+  --navy-ink:#e9eef6;
+  --accent:#3987e5;
+  --st-arrest:#0ca30c;
+  --st-custody:#3987e5;
+  --st-dead:#8a8c95;
+  --st-pending:#fab219;
+  --st-pending-ink:#fab219;
+  --st-arrest-ink:#0ca30c;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--plane);
+  color:var(--ink);
+  font-family:"Sarabun","IBM Plex Sans Thai",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.ui{font-family:"IBM Plex Sans Thai","Sarabun",system-ui,sans-serif}
+.num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 72px}
+
+/* ---------- masthead ---------- */
+.masthead{background:var(--navy);color:var(--navy-ink)}
+.masthead .wrap{padding-top:20px;padding-bottom:20px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:flex-end;justify-content:space-between}
+.brand{display:flex;flex-direction:column;gap:2px}
+.eyebrow{font-family:"IBM Plex Sans Thai",sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
+.masthead h1{margin:0;font-size:26px;font-weight:700;letter-spacing:-.01em;line-height:1.2;text-wrap:balance}
+.masthead .sub{font-size:13px;opacity:.78;margin-top:2px}
+.stamp{text-align:right;font-size:12.5px;opacity:.85;line-height:1.7}
+.stamp b{font-family:"IBM Plex Mono",monospace;font-weight:600}
+.livebadge{display:inline-block;margin-left:8px;padding:1px 8px 2px;border-radius:999px;font-size:11px;font-weight:600;font-family:"IBM Plex Sans Thai",sans-serif;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25)}
+.livebadge.on{background:rgba(12,163,12,.28);border-color:rgba(12,163,12,.6)}
+
+/* ---------- kpi ---------- */
+.kpis{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr 1fr;gap:12px;margin-top:22px}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.kpis{grid-template-columns:1fr}}
+.kpi{background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:14px 16px 15px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:2px}
+.kpi.lead{border-left:4px solid var(--st-pending)}
+.kpi .k-label{font-family:"IBM Plex Sans Thai",sans-serif;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--ink-2);display:flex;align-items:center;gap:7px}
+.kpi .k-val{font-family:"IBM Plex Mono",monospace;font-size:34px;font-weight:600;line-height:1.15;letter-spacing:-.02em}
+.kpi .k-foot{font-size:12px;color:var(--ink-3)}
+.dot{width:9px;height:9px;border-radius:2px;flex:none;display:inline-block}
+.d-pending{background:var(--st-pending)}
+.d-arrest{background:var(--st-arrest)}
+.d-custody{background:var(--st-custody)}
+.d-dead{background:var(--st-dead)}
+
+/* ---------- progress ---------- */
+.progress{margin-top:12px;background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:14px 16px;box-shadow:var(--shadow)}
+.progress .p-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:9px}
+.progress .p-title{font-family:"IBM Plex Sans Thai",sans-serif;font-weight:600;font-size:14px}
+.progress .p-note{font-size:12.5px;color:var(--ink-3)}
+.p-track{display:flex;gap:2px;height:20px;background:transparent}
+.p-track span{display:block;height:100%}
+.p-track span:first-child{border-radius:4px 0 0 4px}
+.p-track span:last-child{border-radius:0 4px 4px 0}
+
+/* ---------- sections ---------- */
+section{margin-top:30px}
+.s-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:11px}
+.s-head h2{margin:0;font-size:17px;font-weight:600;letter-spacing:-.005em}
+.s-head p{margin:0;font-size:12.5px;color:var(--ink-3)}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:8px;box-shadow:var(--shadow)}
+.pad{padding:16px 18px 18px}
+
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2)}
+.legend span{display:flex;align-items:center;gap:6px}
+
+.split{display:grid;grid-template-columns:1.75fr 1fr;gap:14px;align-items:start}
+@media (max-width:880px){.split{grid-template-columns:1fr}}
+
+/* ---------- bar rows ---------- */
+.rows{display:flex;flex-direction:column;gap:9px;margin-top:14px}
+.brow{display:grid;grid-template-columns:118px 1fr 92px;gap:12px;align-items:center}
+.brow.wide{grid-template-columns:132px 1fr 92px}
+@media (max-width:560px){.brow,.brow.wide{grid-template-columns:104px 1fr 74px;gap:8px}}
+.blabel{font-family:"IBM Plex Sans Thai",sans-serif;font-size:12.5px;font-weight:500;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track{display:flex;gap:2px;height:18px;border-radius:4px}
+.track span{display:block;height:100%;cursor:default}
+.track span:first-child{border-radius:4px 0 0 4px}
+.track span:last-child{border-radius:0 4px 4px 0}
+.track span:only-child{border-radius:4px}
+.s-pending{background:var(--st-pending)}
+.s-arrest{background:var(--st-arrest)}
+.s-custody{background:var(--st-custody)}
+.s-dead{background:var(--st-dead)}
+.bval{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-2);white-space:nowrap;text-align:right}
+.bval b{color:var(--ink);font-weight:600}
+
+/* ---------- day bars ---------- */
+.days{display:flex;align-items:flex-end;gap:22px;height:132px;margin-top:2px;padding-bottom:2px;max-width:420px}
+.day{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;height:100%}
+.day .dbar{width:100%;max-width:56px;background:var(--st-arrest);border-radius:4px 4px 0 0}
+.day .dnum{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600}
+.day .dlab{font-size:11.5px;color:var(--ink-3);white-space:nowrap}
+.baseline{height:1px;background:var(--rule)}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+thead th{
+  position:sticky;top:0;z-index:2;background:var(--surface-2);
+  font-family:"IBM Plex Sans Thai",sans-serif;font-size:11.5px;font-weight:600;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);
+  text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);white-space:nowrap;
+}
+tbody td{padding:8px 12px;border-bottom:1px solid var(--rule);vertical-align:middle}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--surface-2)}
+td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;color:var(--ink-3);text-align:right;white-space:nowrap}
+td.name{font-weight:500}
+.scroller{max-height:560px;overflow-y:auto;overflow-x:auto}
+
+.pill{display:inline-flex;align-items:center;gap:6px;padding:2px 9px 3px;border-radius:999px;font-size:12px;font-weight:600;font-family:"IBM Plex Sans Thai",sans-serif;white-space:nowrap;border:1px solid var(--hair)}
+.p-pending{color:var(--st-pending-ink);background:color-mix(in srgb,var(--st-pending) 16%,transparent)}
+.p-arrest{color:var(--st-arrest-ink);background:color-mix(in srgb,var(--st-arrest) 15%,transparent)}
+.p-custody{color:var(--st-custody);background:color-mix(in srgb,var(--st-custody) 14%,transparent)}
+.p-dead{color:var(--ink-2);background:color-mix(in srgb,var(--st-dead) 18%,transparent)}
+
+.minitrack{display:flex;gap:2px;height:9px;width:120px;border-radius:3px}
+.minitrack span{height:100%}
+.minitrack span:first-child{border-radius:3px 0 0 3px}
+.minitrack span:last-child{border-radius:0 3px 3px 0}
+.minitrack span:only-child{border-radius:3px}
+
+/* ---------- filters ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--rule)}
+.filters input[type=search],.filters select{
+  font-family:"Sarabun",sans-serif;font-size:13.5px;color:var(--ink);
+  background:var(--surface-2);border:1px solid var(--rule);border-radius:6px;
+  padding:7px 10px;min-width:0;
+}
+.filters input[type=search]{flex:1 1 220px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  font-family:"IBM Plex Sans Thai",sans-serif;font-size:12.5px;font-weight:500;
+  padding:6px 11px;border-radius:999px;border:1px solid var(--rule);
+  background:var(--surface-2);color:var(--ink-2);cursor:pointer;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--navy-ink)}
+.chip:focus-visible,.filters input:focus-visible,.filters select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.count{padding:9px 16px;font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--rule)}
+
+/* ---------- custody list ---------- */
+.custody{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0;}
+.citem{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--rule)}
+.citem .cbar{width:3px;border-radius:2px;flex:none;background:var(--st-custody)}
+.citem.dead .cbar{background:var(--st-dead)}
+.citem.other .cbar{background:var(--st-pending)}
+.citem .cname{font-weight:600;font-size:13.5px}
+.citem .cnote{font-size:12.5px;color:var(--ink-2);margin-top:1px}
+
+footer{margin-top:34px;font-size:12px;color:var(--ink-3);line-height:1.75;border-top:1px solid var(--rule);padding-top:14px}
+footer a{color:var(--accent)}
+
+#tip{
+  position:fixed;z-index:50;pointer-events:none;opacity:0;transition:opacity .1s;
+  background:var(--ink);color:var(--plane);font-size:12.5px;font-family:"IBM Plex Sans Thai",sans-serif;
+  padding:6px 9px;border-radius:6px;white-space:nowrap;box-shadow:var(--shadow);
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand">
+      <h1>รายงานการจับกุม เคส Luxury Packaging Exchange</h1>
+    </div>
+    <div class="stamp">
+      อัปเดตล่าสุด <b id="asof">3 ก.ย. 2569 21:30</b> <span class="livebadge" id="livebadge">ข้อมูลบันทึกไว้</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="progress">
+    <div class="p-head">
+      <div class="p-title">ความคืบหน้าภาพรวม</div>
+      <div class="p-note" id="p-note">–</div>
+    </div>
+    <div class="p-track" id="p-track"></div>
+    <div class="legend" style="margin-top:10px">
+      <span><i class="dot d-pending"></i>ยังไม่จับกุม</span>
+      <span><i class="dot d-arrest"></i>จับกุมแล้ว</span>
+      <span><i class="dot d-custody"></i>คุมขัง</span>
+      <span><i class="dot d-dead"></i>เสียชีวิต</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="s-head">
+      <h2>การจับกุมรายวัน</h2>
+      <p>จำนวนผู้ถูกจับกุม (คน)</p>
+    </div>
+    <div class="card pad">
+      <div class="days" id="days"></div>
+      <div class="baseline" id="dayline"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="s-head">
+      <h2>บัญชีรายชื่อทั้งหมด</h2>
+      <p>ค้นหาด้วยชื่อ หน่วย หรือพนักงานสอบสวน</p>
+    </div>
+    <div class="card">
+      <div class="filters">
+        <input type="search" id="q" placeholder="ค้นหาชื่อ / หน่วย / พนักงานสอบสวน" aria-label="ค้นหา">
+        <select id="f-bureau" aria-label="กรองตามกองบังคับการ"></select>
+        <div class="chips" id="f-status"></div>
+      </div>
+      <div class="scroller">
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:right">#</th>
+              <th>ชื่อ-นามสกุล</th>
+              <th>หน่วยที่มอบหมาย</th>
+              <th>พนักงานสอบสวน</th>
+              <th>สถานะ</th>
+              <th>วันที่จับกุม / หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody id="tb-roster"></tbody>
+        </table>
+      </div>
+      <div class="count" id="rowcount">–</div>
+    </div>
+  </section>
+
+  <footer>
+    ที่มา: Google Sheet “ถังรวมข้อมูล (Luxury)” — แผ่นงานบัญชีหมายจับ · แดชบอร์ดนี้ไม่แสดงเลขบัตรประชาชนและลิงก์เอกสารหมายจับ/สำนวน เพื่อความปลอดภัยของข้อมูล<br>
+    ไม่นับรวม 1 ราย (เยาวชน) ที่ปรากฏในชีตต้นทางแต่ไม่นำมารวมในรายงานนี้<br>
+    “ปิดแล้ว” หมายถึงหมายจับที่มีสถานะ จับกุมแล้ว · คุมขัง · เสียชีวิต · ตัวเลขคำนวณจากข้อมูลต้นทางโดยตรง หากแก้ไขในชีตแล้วต้องการให้แดชบอร์ดอัปเดต แจ้งได้ทุกเมื่อ
+  </footer>
+</div>
+
+<div id="tip" role="status"></div>
+
+<script>
+const SNAPSHOT_AT = '3 ก.ย. 2569 21:30';
+const SHEET_ID = '1RDEh7aE1R-oiCJxz9k_aeczVqjALwD02_WtVTkL8GPM';
+const SHEET_GID = '914555636';
+const SHEET_CSV = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:csv&gid=' + SHEET_GID +
+  '&tq=' + encodeURIComponent('select B,D,H,J,K');
+
+let DATA = [{"name": "นายอาทิตย์ พรมมาก", "unit": "กก.1 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.หญิงณิชากรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.นภามาศ โพธิ์ศรี", "unit": "กก.1 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.อดิศักดิ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.กัญฐมา วิมลสลิล", "unit": "กก.1 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.หญิงณิชากรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.ปริศนา อินทะวงศ์", "unit": "กก.1 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.นวัตกรณ์ฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายอดิเทพ ชัยทอง", "unit": "กก.1 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.ธนาธรณ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.สุภาพร ปานมงคล", "unit": "กก.1 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.อดิศักดิ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายสุระสิทธิ์ สุรินทร", "unit": "กก.1 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ธนาธิป", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายยอด นาคภู่", "unit": "กก.2 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.วีระยุทธ์ฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "24", "unit": "กก.2 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.หญิงอัมพรฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายสุกาชัย ธรรมดา", "unit": "กก.2 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ณรงค์ศักดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.ทัศพร วงศ์นาม", "unit": "กก.2 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ธนาธิป", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายณัฐพล คงพารา", "unit": "กก.2 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.หญิงอัมพรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายยงยุทธ สุนะไตร", "unit": "กก.2 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.ภาสกรฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "น.ส.กุลณัฐ วิเชียรซอย", "unit": "กก.2 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ต.เจษฎาฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายธีรัช ธนศรีพนิชชัย", "unit": "กก.3 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.อภิชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายโสภณ เฉลิมพระจง", "unit": "กก.3 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ธนาธิป", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.รุจิรา คอนมั่ง", "unit": "กก.3 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ต.เจษฎาฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.นฤดี หาลึก", "unit": "กก.3 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.ธนาธรณ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางสุภาวดี ฮดบุญเรือง", "unit": "กก.3 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.อดิศักดิ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายปรเมศ ธรรมสัจจานันท์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.อภิชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.กนกกาญจน์ บุญเพ็ง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.นวัตกรณ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.พรพรรณ พันธุ์เมือง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.สายชล", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "น.ส.สาวิตรี แซ่ฟุ้ง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.อภิชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.นิยะดา มาลีวัลย์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.เริงชัย", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายรชต รานเทศ", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.วิวัฒน์ชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.กัญญ์ชิสา ยอดดี", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.ศิริชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.สมใจ ผลเกตุ", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.ภาสกรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.จารุวรรณ มะลาศรี", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ชาญชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายประพันธ์ นพเกล้า", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.ธนาธรณ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายอภิชาติ ไตรรัตน์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ณรงค์ศักดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.รัตติกาล ศิลา", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.หญิงอัมพรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางธัญลักษณ์ ธนรัชต์ชวนนท์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ต.เจษฎาฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.พรพรรณ สมาคม", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ถิรภัทรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายนฤชา พูลธนะ", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ชาญชล", "status": "คุมขัง", "date": "", "note": ""}, {"name": "นายณรงค์เดช เงินขาว", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ถิรภัทรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางสังวาล เชื่อนโยธา", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.ศิริชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายภูมิพิริณย์ นาควิโรจน์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.นภัส", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางภารวี สุขคำ", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.หญิงอัมพรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายฉัตรชัย สุดประเทือง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.นวัตกรณ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางอร ฉายแสง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.นวัตกรณ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.กนกพร บุญพูล", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ณรงค์ศักดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.กัญณัฏฐ์ จันทร์สุทนพจน์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.วีระยุทธ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายศรีสุวรรณ วงค์คำไช", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ธนาธิป", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.สุวรรณี พุ่มพา", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.เริงชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "MR. CHON LAP WONG", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.วิวัฒน์ชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "MR. TOL REM", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.นภัส", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "MS. SORPHOEURN SAY", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.นภัส", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "MISS EK SONITA NONN", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.สถาพร", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "MR.SAJJAD ALI BEHLUM", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.วิวัฒน์ชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "MR.GUAFA YOEUR", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.นภัส", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายกลวัชร บุญคง", "unit": "กก.5 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.หญิงณิชากรฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "น.ส.อัษฎา อยู่เย็น", "unit": "กก.5 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.อดิศักดิ์ฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายรักสกุล ชูสงค์", "unit": "กก.5 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.ชาญชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายธีรพงษ์ กลางแก้วกิจ", "unit": "กก.5 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.หญิงอัมพรฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายปิติภัทร พวงสายหยุด", "unit": "กก.5 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "พ.ต.ท.เริงชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายนัฐพงษ์ วัฒนเสถียร", "unit": "กก.1 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.ท.ภาสกรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.สิริมา ไชยรัตน์", "unit": "กก.1 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.ท.นวัตกรณ์ฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "น.ส.กมลชนก เดชะพิทักษ์วงศ์", "unit": "กก.1 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ต.เจษฎาฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.พัชรณัฏฐ์ เอกปุณณวรรธน์", "unit": "กก.1 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ชาญชล", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายสราวุฒิ ระวังซื่อ", "unit": "กก.1 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.ท.ธนาธรณ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.นิจกาน เรวรรณ์", "unit": "กก.2 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.ท.ภาสกรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางธัญนันท์ กิตติศักดิ์เสรีกุล", "unit": "กก.2 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ธนาธิป", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายชนะชล โพอินทะ", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.อ.วีระยุทธ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.นิมิตรา ประเสริฐหล้า", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.สายชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายพุฒิพงศ์ จันกามา", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.เริงชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายอมชิต น้อยนิล", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.หญิงณิชากรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายโชคชัย วามะลุน", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.อดิศักดิ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายสรวิชญ์ เวียนนอก", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.สายชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายณรงค์ ศรีรักษ์", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.อดิศักดิ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายคงประยงค์ สุภาพ", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.หญิงณิชากรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายสมจิตร สายชุ่มดี", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.อ.วีระยุทธ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายกิติคุณ กองปาน", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.อ.ศิริชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.วิภารัตน์ มากชัย", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.หญิงณิชากรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.พรกมา โพธิ์บุบผา", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.นภัส", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายมนัส ตอนศรี", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.อภิชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.ญดาพร นโรจน์รัมย์", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.หญิงณิชากรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายศุภชัย พลุกระโทก", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ณรงค์ศักดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายนนทชัย วงศ์ชะนะ", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.อภิชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายยุทธพล งิ้วพรม", "unit": "กก.3 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.นภัส", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.อดิภา ทนันไชย", "unit": "กก.4 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.หญิงอัมพรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.เขมจิรา กันทะดง", "unit": "กก.4 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.สายชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายพิบูลย์ โมกขเวศ", "unit": "กก.4 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ถิรภัทรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางสำอางค์ ขำบุญรอด", "unit": "กก.4 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ธนาธิป", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายจันทรพันธ์ วัดแก้ว", "unit": "กก.4 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.เริงชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายสุเทพ สุภา", "unit": "กก.4 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ถิรภัทรฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.บุญญารัตน์ โยงรัมย์", "unit": "กก.4 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ชาญชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.สุชาดา ติ๊บขาว", "unit": "กก.4 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.อ.วิวัฒน์ชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายปัญญา เทียมสุริยา", "unit": "กก.5 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ธนาธิป", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.มลวาลี ทวีศรี", "unit": "กก.5 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.ท.ธนาธรณ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายธนพล ทองอำพล", "unit": "กก.5 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.ณรงค์ศักดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางเขมิกา สุขวัลลิ", "unit": "กก.5 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.นภัส", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.แอน แก้วอินชัย", "unit": "กก.5 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.อ.สถาพร", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.นันทิยา สุขขี", "unit": "กก.5 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.สายชล", "status": "จับกุมแล้ว", "date": "1 ก.ย.69", "note": ""}, {"name": "นายสุทีป พุมนวล", "unit": "กก.6 บก.ป.", "bureau": "บก.ป.", "io": "พ.ต.ท.สายชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.กรุณา อำพันทอง", "unit": "กก.6 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.ท.นวัตกรณ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายชนะพล จุฑานฤนาท", "unit": "กก.6 บก.ป.", "bureau": "บก.ป.", "io": "ร.ต.อ.สถาพร", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายยศสัณต์ เจ๊ะวังมา", "unit": "กก.2 บก.ปทส.", "bureau": "บก.ปทส.", "io": "ร.ต.ท.นวัตกรณ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.มนทกานต์ วงษ์อนุ", "unit": "กก.2 บก.ปทส.", "bureau": "บก.ปทส.", "io": "พ.ต.ท.ณรงค์ศักดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายอมเรศ ไพรพนม", "unit": "กก.2 บก.ปทส.", "bureau": "บก.ปทส.", "io": "ร.ต.อ.วีระยุทธ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.รจนา เจริญพงษ์", "unit": "กก.3 บก.ปทส.", "bureau": "บก.ปทส.", "io": "ร.ต.อ.วีระยุทธ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายจีรศักดิ์ โพธิ์สาลี", "unit": "กก.3 บก.ปทส.", "bureau": "บก.ปทส.", "io": "พ.ต.ท.เริงชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายณรงค์ศักดิ์ ศรีปัญญา", "unit": "กก.3 บก.ปทส.", "bureau": "บก.ปทส.", "io": "ร.ต.อ.วิวัฒน์ชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.สุกฤตา หนูนันท์", "unit": "กก.3 บก.ปทส.", "bureau": "บก.ปทส.", "io": "พ.ต.ท.ชาญชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.ปรางค์ทิพย์ อินทรจันทร์", "unit": "กก.3 บก.ปทส.", "bureau": "บก.ปทส.", "io": "ร.ต.อ.สถาพร", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายก้องศักดิ์ แซ่เตียว", "unit": "กก.3 บก.ปทส.", "bureau": "บก.ปทส.", "io": "พ.ต.ท.เริงชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายโก้กุล มูลคำภา", "unit": "กก.4 บก.ปทส.", "bureau": "บก.ปทส.", "io": "พ.ต.ต.เจษฎาฯ", "status": "จับกุมแล้ว", "date": "3 ก.ย.69", "note": ""}, {"name": "นายธีรภัทร์ พะทัต", "unit": "กก.4 บก.ปทส.", "bureau": "บก.ปทส.", "io": "พ.ต.ท.ชาญชล", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.นิตติยา นาคเลี้ยง", "unit": "กก.4 บก.ปทส.", "bureau": "บก.ปทส.", "io": "ร.ต.อ.วิวัฒน์ชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "น.ส.อนงค์ กุลบุตร", "unit": "กก.5 บก.ปทส.", "bureau": "บก.ปทส.", "io": "พ.ต.ท.อดิศักดิ์ฯ", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายภูริวิทย์ แสงอรุณ", "unit": "กก.5 บก.ปทส.", "bureau": "บก.ปทส.", "io": "ร.ต.ท.ภาสกรฯ", "status": "คุมขัง", "date": "", "note": ""}, {"name": "น.ส.สุนิสา สกุลพราหมณ์", "unit": "กก.5 บก.ปทส.", "bureau": "บก.ปทส.", "io": "ร.ต.อ.สถาพร", "status": "คุมขัง", "date": "", "note": ""}, {"name": "นายสำเริง สำราญเพ็ชร", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายณัฐสิทธิ์ เอ็มประโคน", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางศิริลักษณ์ บุญรัตน์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายภูมิพัฒน์ เมฆฉาย", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.ศิริชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางรัชนันท์ สโตลลี่", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายภูมิพร สุทธาคง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายคณพศ ก้อนศรี", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.ศิริชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายดีน เขตสาลี", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.อ.ศิริชัย", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นางสายรุ้ง เมืองสนธิ์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายคเณตกรณ์ สิทธิรมาสุทธิ์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายสมนึก ศิริพานทอง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายภูริ ศิริพานทอง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "ร.ต.ท.เจตน์สฤษดิ์", "status": "ยังไม่จับกุม", "date": "", "note": ""}, {"name": "นายทศพล บุญชู", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "อัยการส่งฟ้องศาล อยู่เรือนจำภูเก็ต"}, {"name": "น.ส.สุจิตรา จิตติวัฒน์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "อัยการส่งฟ้องศาล อยู่เรือนจำกาฬสินธ์"}, {"name": "นายภควัต ถิตย์กุล", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "อัยการส่งฟ้องศาล ประกันตัว ตรวจสอบนัดอัยการ นำหมายเข้าจับกุม"}, {"name": "นางสาวกาญจนา แก้วประสงค์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "ส่งอัยการแล้ว ไม่ได้ควบคุมตัว ตรวจสอบนัดอัยการ นำหมายเข้าจับกุม"}, {"name": "นางสาวกณิกา ฉีกกระโทก", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "จำคุกเรือนจำอำเภอธัญบุรี เมื่อ 14 พ.ค. 2569"}, {"name": "นางสาวศิริพร ม่องซา", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "จำคุกเรือนจำทัณฑสถานหญิง พิษณุโลก เมื่อ 15 พ.ค. 2569"}, {"name": "นายวิทยา พึ่งน้ำ", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "เรือนจำธนบุรี"}, {"name": "น.ส.อุไรรัตน์ แสงทอง", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "เรือนจำสมุทรปราการ"}, {"name": "นายบุญญฤทธิ์ เหมือนทองแท้", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "คุมขัง", "date": "", "note": "(ปัจจุบันอยู่เรือนจำ) รับตัว 24 ก.ค. 2569 เรือนจำพิเศษมีนบุรี"}, {"name": "นายธนพล กล้าเหลือ", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "ตาย", "date": "", "note": "เสียชีวิต"}, {"name": "นางสาวสุกัญญา ศานุวงศ์", "unit": "กก.4 บก.ปอศ.", "bureau": "บก.ปอศ.", "io": "", "status": "ตาย", "date": "", "note": "เสียชีวิต"}];
+
+const ORDER = ["ยังไม่จับกุม","จับกุมแล้ว","คุมขัง","ตาย"];
+const CLS   = {"ยังไม่จับกุม":"s-pending","จับกุมแล้ว":"s-arrest","คุมขัง":"s-custody","ตาย":"s-dead"};
+const PILL  = {"ยังไม่จับกุม":"p-pending","จับกุมแล้ว":"p-arrest","คุมขัง":"p-custody","ตาย":"p-dead"};
+const LABEL = {"ยังไม่จับกุม":"ยังไม่จับกุม","จับกุมแล้ว":"จับกุมแล้ว","คุมขัง":"คุมขัง","ตาย":"เสียชีวิต"};
+const TH_MONTHS = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tally = rows => ORDER.reduce((a,s)=>(a[s]=rows.filter(r=>r.status===s).length,a),{});
+const closed = t => t["จับกุมแล้ว"]+t["คุมขัง"]+t["ตาย"];
+const spaced = d => String(d).replace(/(\d{2})$/,' $1');
+
+const state = {q:'', bureau:'', status:new Set()};
+
+/* ================= CSV → records ================= */
+function parseCSV(text){
+  const rows=[]; let row=[], cell='', q=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(q){
+      if(c === '"'){ if(text[i+1] === '"'){ cell+='"'; i++; } else q=false; }
+      else cell+=c;
+    } else if(c === '"') q=true;
+    else if(c === ','){ row.push(cell); cell=''; }
+    else if(c === '\n'){ row.push(cell); rows.push(row); row=[]; cell=''; }
+    else if(c !== '\r') cell+=c;
+  }
+  if(cell !== '' || row.length){ row.push(cell); rows.push(row); }
+  return rows;
+}
+
+const EXCLUDE = new Set(['นายสุภีร์ แสงอรุณ']);
+
+function toRecords(csvRows){
+  const out=[]; let noteMode=false;
+  for(const r of csvRows){
+    const name=(r[0]||'').trim(), unit=(r[1]||'').trim(), c3=(r[2]||'').trim();
+    const status=(r[3]||'').trim(), date=(r[4]||'').trim();
+    if(!name) continue;
+    if(name === 'ชื่อ-นามสกุล' || name === 'ชื่อ-สกุล'){ noteMode = (c3 === 'หมายเหตุ'); continue; }
+    if(EXCLUDE.has(name)) continue;
+    if(!unit) continue;
+    const bm = unit.match(/บก\..*/);
+    out.push({
+      name, unit,
+      bureau: bm ? bm[0].trim() : unit,
+      io: noteMode ? '' : c3,
+      note: noteMode ? c3 : '',
+      status: status || 'ยังไม่จับกุม',
+      date
+    });
+  }
+  return out;
+}
+
+/* ================= render ================= */
+function render(){
+  const T = tally(DATA), TOTAL = DATA.length;
+
+  const dayTally = new Map();
+  DATA.filter(r=>r.date).forEach(r=>dayTally.set(r.date,(dayTally.get(r.date)||0)+1));
+  const dayKey = d => {
+    const m = String(d).match(/^\s*(\d+)\s*([^\d\s]+)\s*(\d+)\s*$/);
+    if(!m) return [9999,99,99];
+    const mi = TH_MONTHS.indexOf(m[2]);
+    return [Number(m[3]), mi < 0 ? 99 : mi, Number(m[1])];
+  };
+  const dayOrder = [...dayTally.keys()].sort((a,b)=>{
+    const A=dayKey(a), B=dayKey(b);
+    return A[0]-B[0] || A[1]-B[1] || A[2]-B[2];
+  });
+  const dayCount = dayOrder.map(d=>dayTally.get(d));
+  const dayMax = dayCount.length ? Math.max(...dayCount) : 1;
+  const ARREST_RANGE = dayOrder.length === 0 ? 'ยังไม่มีบันทึกวันที่'
+    : dayOrder.length === 1 ? spaced(dayOrder[0])
+    : `${dayOrder[0].replace(/\s*[^\d\s]+\s*\d+$/,'')}–${spaced(dayOrder[dayOrder.length-1])}`;
+
+  /* KPI */
+  const kpis = [
+    {label:'หมายจับทั้งหมด', dot:'', val:TOTAL, foot:'ราย', lead:false},
+    {label:'ยังไม่จับกุม', dot:'d-pending', val:T["ยังไม่จับกุม"], foot:'คงเหลือ', lead:true},
+    {label:'จับกุมแล้ว', dot:'d-arrest', val:T["จับกุมแล้ว"], foot:ARREST_RANGE, lead:false},
+    {label:'คุมขัง', dot:'d-custody', val:T["คุมขัง"], foot:'อยู่ในเรือนจำ/ชั้นศาล', lead:false},
+    {label:'เสียชีวิต', dot:'d-dead', val:T["ตาย"], foot:'', lead:false},
+  ];
+  document.getElementById('kpis').innerHTML = kpis.map(k=>`
+    <div class="kpi${k.lead?' lead':''}">
+      <div class="k-label">${k.dot?`<i class="dot ${k.dot}"></i>`:''}${k.label}</div>
+      <div class="k-val">${k.val}</div>
+      <div class="k-foot">${esc(k.foot)}</div>
+    </div>`).join('');
+
+  /* progress */
+  const pct = n => TOTAL ? n/TOTAL*100 : 0;
+  document.getElementById('p-track').innerHTML = ORDER.filter(s=>T[s]>0).map(s=>
+    `<span class="${CLS[s]}" style="width:${pct(T[s]).toFixed(2)}%" data-tip="${LABEL[s]} ${T[s]} ราย (${pct(T[s]).toFixed(1)}%)"></span>`).join('');
+  document.getElementById('p-note').innerHTML =
+    `ดำเนินการแล้ว <b class="num">${closed(T)}</b> จาก <b class="num">${TOTAL}</b> ราย — <b class="num">${TOTAL?(closed(T)/TOTAL*100).toFixed(1):'0.0'}%</b>`;
+
+  /* arrests per day */
+  const daysEl = document.getElementById('days');
+  const dayWidth = Math.max(200, Math.min(760, dayOrder.length*104)) + 'px';
+  daysEl.style.maxWidth = dayWidth;
+  document.getElementById('dayline').style.maxWidth = dayWidth;
+  daysEl.innerHTML = dayOrder.length ? dayOrder.map((d,i)=>`
+    <div class="day">
+      <div class="dnum">${dayCount[i]}</div>
+      <div class="dbar" style="height:${(dayCount[i]/dayMax*100).toFixed(1)}%" data-tip="${esc(d)} · จับกุม ${dayCount[i]} ราย"></div>
+      <div class="dlab">${esc(spaced(d))}</div>
+    </div>`).join('')
+    : `<div style="align-self:center;color:var(--ink-3);font-size:13px">ยังไม่มีการบันทึกวันที่จับกุม</div>`;
+
+  /* bureau filter */
+  const m = new Map();
+  DATA.forEach(r=>{ if(!m.has(r.bureau)) m.set(r.bureau,0); m.set(r.bureau,m.get(r.bureau)+1); });
+  const bureaus = [...m].sort((a,b)=>b[1]-a[1]);
+  const fb = document.getElementById('f-bureau');
+  if(state.bureau && !m.has(state.bureau)) state.bureau = '';
+  fb.innerHTML = '<option value="">ทุกกองบังคับการ</option>' +
+    bureaus.map(([k,n])=>`<option value="${esc(k)}"${k===state.bureau?' selected':''}>${esc(k)} (${n})</option>`).join('');
+
+  document.getElementById('f-status').innerHTML = ORDER.map(s=>
+    `<button class="chip" type="button" data-status="${s}" aria-pressed="${state.status.has(s)}"><i class="dot ${CLS[s].replace('s-','d-')}"></i>${LABEL[s]} ${T[s]}</button>`).join('');
+
+  renderRoster();
+}
+
+function renderRoster(){
+  const TOTAL = DATA.length;
+  const rows = DATA.filter(r=>{
+    if(state.bureau && r.bureau!==state.bureau) return false;
+    if(state.status.size && !state.status.has(r.status)) return false;
+    if(state.q){
+      const hay = (r.name+' '+r.unit+' '+r.io+' '+r.note).toLowerCase();
+      if(!hay.includes(state.q)) return false;
+    }
+    return true;
+  });
+  document.getElementById('tb-roster').innerHTML = rows.length ? rows.map((r,i)=>`
+    <tr>
+      <td class="n">${i+1}</td>
+      <td class="name">${esc(r.name)}</td>
+      <td>${esc(r.unit)}</td>
+      <td style="color:var(--ink-2)">${esc(r.io) || '<span style="color:var(--ink-3)">—</span>'}</td>
+      <td><span class="pill ${PILL[r.status]||'p-pending'}">${esc(LABEL[r.status]||r.status)}</span></td>
+      <td style="color:var(--ink-2)">${esc(r.date || r.note) || '<span style="color:var(--ink-3)">—</span>'}</td>
+    </tr>`).join('')
+    : `<tr><td colspan="6" style="padding:24px 12px;color:var(--ink-3)">ไม่พบรายการที่ตรงกับเงื่อนไข — ลองล้างตัวกรองหรือแก้คำค้น</td></tr>`;
+  document.getElementById('rowcount').textContent = `แสดง ${rows.length} จาก ${TOTAL} รายการ`;
+}
+
+/* ================= live refresh ================= */
+function thaiNow(){
+  const p = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Bangkok',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false})
+    .formatToParts(new Date()).reduce((a,x)=>(a[x.type]=x.value,a),{});
+  return `${Number(p.day)} ${TH_MONTHS[Number(p.month)-1]} ${Number(p.year)+543} ${p.hour}:${p.minute}`;
+}
+function setStamp(text, live){
+  const el = document.getElementById('asof');
+  if(el) el.textContent = text;
+  const badge = document.getElementById('livebadge');
+  if(badge){
+    badge.textContent = live ? 'ดึงสดจากชีต' : 'ข้อมูลบันทึกไว้';
+    badge.className = 'livebadge' + (live ? ' on' : '');
+  }
+}
+async function tryLive(){
+  try{
+    const res = await fetch(SHEET_CSV + '&cb=' + Date.now(), {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const recs = toRecords(parseCSV(await res.text()));
+    if(recs.length < 50) throw new Error('too few rows');
+    DATA = recs;
+    render();
+    setStamp(thaiNow(), true);
+  }catch(e){
+    setStamp(SNAPSHOT_AT, false);
+  }
+}
+
+/* ================= wiring ================= */
+document.getElementById('q').addEventListener('input', e=>{ state.q = e.target.value.trim().toLowerCase(); renderRoster(); });
+document.getElementById('f-bureau').addEventListener('change', e=>{ state.bureau = e.target.value; renderRoster(); });
+document.getElementById('f-status').addEventListener('click', e=>{
+  const b = e.target.closest('.chip'); if(!b) return;
+  const s = b.dataset.status;
+  if(state.status.has(s)){ state.status.delete(s); b.setAttribute('aria-pressed','false'); }
+  else { state.status.add(s); b.setAttribute('aria-pressed','true'); }
+  renderRoster();
+});
+
+const tip = document.getElementById('tip');
+document.addEventListener('mouseover', e=>{
+  const t = e.target.closest('[data-tip]');
+  if(!t){ tip.style.opacity = 0; return; }
+  tip.textContent = t.dataset.tip;
+  tip.style.opacity = 1;
+});
+document.addEventListener('mousemove', e=>{
+  if(tip.style.opacity === '0' || tip.style.opacity === '') return;
+  const x = Math.min(e.clientX + 14, window.innerWidth - tip.offsetWidth - 10);
+  tip.style.left = x + 'px';
+  tip.style.top = (e.clientY - tip.offsetHeight - 10) + 'px';
+});
+
+render();
+setStamp(SNAPSHOT_AT, false);
+tryLive();
+setInterval(tryLive, 120000);
+</script>
+
+</body>
+</html>
